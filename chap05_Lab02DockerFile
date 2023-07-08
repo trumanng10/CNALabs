@@ -10,3 +10,4 @@ EXPOSE 80
 # Set the working directory
 WORKDIR /var/www/html
 
+CMD ["php","-S", "0.0.0.0:80"]  
