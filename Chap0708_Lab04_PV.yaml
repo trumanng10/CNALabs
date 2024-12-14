@@ -12,3 +12,11 @@ spec:
   storageClassName: local-storage
   local:
     path: /home
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: kubernetes.io/hostname
+          operator: In
+          values:
+          - <Node Name>
